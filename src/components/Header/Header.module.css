@@ -1,21 +1,23 @@
 .modalContainer {
   width: 100%; 
   min-height: 100vh;
-  position: absolute;
+  position: fixed;
   background-color: rgb(0,0,0,0.4);
   right: 0;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .mobNavContainer {
   max-width: 300px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   background-color: white;
   min-height: 100vh;
+  z-index: 2;
 }
 
 .iconsNav {
@@ -44,6 +46,7 @@
 }
 
 .mobNavContainer > ul > li {
+  list-style: none;
   padding: 10px;
   border-bottom: 1px solid #ebebeb;
   cursor: pointer;
@@ -57,7 +60,7 @@
   border-bottom: none;
 }
 
-.activeRoute {
+.activeRouteMobile {
   border-left: 5px solid #00B2FF;
   font-weight: bold;
   color: #00B2FF;
@@ -69,6 +72,7 @@
 }
 
 .li {
+  list-style: none;
   cursor: pointer;
   transition: all ease 0.3s;
 }

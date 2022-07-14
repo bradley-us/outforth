@@ -32,7 +32,7 @@ const HeaderMobile = () => {
       <Section minWidth='120px'>
         <Link href='/'>
           <a>
-            <Image src='/assets/logo/web_outforth.svg' width={170} height={50} alt='Outforth Logo' />
+            <Image src='/assets/logo/web_outforth.svg' width={170} height={40} style={{ paddingTop: '7px'}} alt='Outforth Logo' />
           </a>
         </Link>
       </Section>

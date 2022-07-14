@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-interface IButtonGradient {
+type IButtonGradient = {
     color?: string;
     fw?: string;
     bgDir?: string;
@@ -21,7 +21,7 @@ export const ButtonGradient = styled.button<IButtonGradient>`
     color: ${(props: any) => props.color || 'black'};
     font-weight: ${(props: any) => props.fw || 'normal'};
 `
-interface IButton {
+type IButton = {
   color?: string;
   fw?: string;
   bgColor?: string;

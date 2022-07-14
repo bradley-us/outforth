@@ -70,8 +70,8 @@ const Footer = () => {
         <FlexColumnContainer color='#A7CBE5'>
           <Text fontSize={20} fontSizeMD={16} bold>2022 © Outforth IT Services</Text>
           <FlexRowContainer width={'100%'} color='#A7CBE5' gap={0}>
-            <Text fontSizeMD={12}><Link href='/'><a>Términos y Condiciones de uso</a></Link></Text>
-            <Text ml mlMD fontSizeMD={12}><Link href='/'><a>Aviso legal y políticas de privacidad</a></Link></Text>
+            <Text fontSizeMD={12}><Link href='/terms-and-conditions'><a>Términos y Condiciones de uso</a></Link></Text>
+            <Text ml mlMD fontSizeMD={12}><Link href='/legal-warning-and-privacy'><a>Aviso legal y políticas de privacidad</a></Link></Text>
           </FlexRowContainer>
         </FlexColumnContainer>
       </Container>

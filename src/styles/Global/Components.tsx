@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface IContainer {
+type IContainer = {
   gridColumns?: string;
   theme?: any;
   py?: string | number;
@@ -20,7 +20,7 @@ export const Container = styled.div<IContainer>`
   }
 `
 
-interface IContentWrapper {
+type IContentWrapper = {
   width?: number | string;
   maxWidth?: number | string;
 }
@@ -29,7 +29,7 @@ export const ContentWrapper = styled.div<IContentWrapper>`
   max-width: ${({maxWidth}) => maxWidth}px;
 `
 
-interface IFlexRowContainer {
+type IFlexRowContainer = {
   justify?: string;
   align?: string;
   width?: string | number;
@@ -58,7 +58,7 @@ export const FlexRowContainer = styled.div<IFlexRowContainer>`
   }
 `
 
-interface IFlexColumnContainer {
+type IFlexColumnContainer = {
   justify?: string;
   align?: string;
   width?: string | number;
@@ -87,7 +87,7 @@ export const FlexColumnContainer = styled.div<IFlexColumnContainer>`
   }
 `
 
-interface ITitle {
+type ITitle = {
   bgDir?: string;
   bgColor1?: string;
   bgColor2?: string;
@@ -113,7 +113,7 @@ export const Title = styled.h1<ITitle>`
   }
 `
 
-interface ISubtitle {
+type ISubtitle = {
   bgDir?: string;
   bgColor1?: string;
   bgColor2?: string;
@@ -141,7 +141,7 @@ export const Subtitle = styled.h2<ISubtitle>`
   }
 `
 
-interface IText {
+type IText = {
   color?: string;
   fontSize?: string | number;
   fontSizeMD?: string | number;
@@ -172,7 +172,7 @@ export const Text = styled.p<IText>`
   }
 `
 
-interface IImgWrapper {
+type IImgWrapper = {
   width?: string | number;
   minWidth?: string | number;
   maxWidth?: string | number;
@@ -191,7 +191,7 @@ export const ImgWrapper = styled.figure<IImgWrapper>`
   cursor: ${({pointer}) => pointer ? 'pointer' : ''};
 `
 
-interface ISectionDivider {
+type ISectionDivider = {
   width?: string | number;
   divider?: boolean;
   colorAlt?: boolean;
@@ -216,5 +216,54 @@ export const SectionDivider = styled.div<ISectionDivider>`
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 32px;
     height: 2px;
+  }
+`
+
+type IBox = {
+  fontSize?: string | number;
+  fontSizeMD?: string | number;
+  bgGradient?: boolean;
+  bgColor?: string;
+  bgDir?: string;
+  bgColor1?: string;
+  bgColor2?: string;
+  bgColor3?: string;
+  py?: string | number;
+  px?: string | number;
+  br?: string | number;
+  bold?: boolean;
+  color?: string;
+  width?: string | number;
+  minWidth?: string | number;
+  maxWidth?: string | number;
+}
+export const Box = styled.span<IBox>`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+
+  border-radius: ${(props: any) => props.br || '5'}px;
+
+  width: ${(props: any) => props.width || 'auto'};
+  min-width: ${(props: any) => props.minWidth || 'auto'};
+  max-width: ${(props: any) => props.maxWidth || 'auto'};
+
+  ${(props: any) => props.bgGradient ? 'background' : null}: linear-gradient(to ${(props: any) => props.bgDir || 'bottom'},
+  ${(props: any) => props.bgColor1 || '#8EF9F8'} 0%,
+  ${(props: any) => props.bgColor2 || '#E6F1F7'} 100%);
+
+  font-weight: ${({ bold }) => bold? 'bold' : '500'};
+  font-size: ${(props: any) => props.fontSize || '18'}px;
+
+  color: ${(props: any) => props.color || '#525252'};
+
+  background-color: ${(props: any) => props.bgColor};
+  
+  padding: ${(props: any) => props.py || '8'}px ${(props: any) => props.px || '16'}px;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: ${(props: any) => props.fontSizeMD}px;
   }
 `

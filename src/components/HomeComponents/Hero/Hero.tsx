@@ -14,6 +14,7 @@ const Hero = () => {
       <Container gridColumns='2' py={100}>
         <FlexColumnContainer align='start'>
           <Title
+            fontSizeMD={40}
             bgColor1='#006BFF'
             bgColor2='#009DFC'
             bgColor3='#27E9F4'

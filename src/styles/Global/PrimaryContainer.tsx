@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface IPrimaryContainer {
+type IPrimaryContainer = {
   bgGradient?: boolean;
   bgColor?: string;
   bgDir?: string;

@@ -127,7 +127,7 @@ const HeroPricing = () => {
             <br/>
             <br/>
             <br/>
-            <Image src='/assets/imgs/stack_devices.png' width={300} height={200} alt='Outforth logo' />
+            <Image src='/assets/imgs/stack_devices.png' width={300} height={200} alt='Stack devices' />
           </div>
         </div>
       </Container>

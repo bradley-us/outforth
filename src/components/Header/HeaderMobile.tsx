@@ -70,7 +70,7 @@ const HeaderMobile = () => {
               <Link href='/'><li className={`${router.asPath === '/' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Home</li></Link>
               <Link href='/pricing'><li className={`${router.asPath === '/pricing' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Pricing</li></Link>
               <Link href='/about'><li className={`${router.asPath === '/about'? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>About</li></Link>
-              <Link href='/contact'><li className={`${router.asPath === '/contact' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Contact</li></Link>
+              {/* <Link href='/contact'><li className={`${router.asPath === '/contact' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Contact</li></Link> */}
               <li>
                 <ButtonGradient color='black' fw='bold'>Contactar</ButtonGradient>
               </li>

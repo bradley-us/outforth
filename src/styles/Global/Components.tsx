@@ -3,10 +3,16 @@ import styled from 'styled-components';
 type IContainer = {
   gridColumns?: string;
   theme?: any;
+  width?: string | number;
+  minWidth?: string | number;
+  maxWidth?: string | number;
   py?: string | number;
   pyMD?: string | number;
 }
 export const Container = styled.div<IContainer>`
+  width: ${(props: any) => props.width || 'auto'};
+  min-width: ${(props: any) => props.minWidth || 'auto'};
+  max-width: ${(props: any) => props.maxWidth || 'auto'};
   display: grid;
   grid-template-columns: repeat(${(props: any) => props.gridColumns || '3'}, 1fr);
   grid-template-rows: 1fr;
@@ -145,6 +151,7 @@ type IText = {
   color?: string;
   fontSize?: string | number;
   fontSizeMD?: string | number;
+  align?: string;
   alignMD?: string;
   pl?: boolean;
   ml?: boolean;
@@ -154,10 +161,10 @@ type IText = {
   bold?: boolean;
 }
 export const Text = styled.p<IText>`
-  color: ${(props: any) => props.color || '#525252'}
+  color: ${(props: any) => props.color || '#525252'};
   display: inline-block;
   width: 100%;
-  text-align: center;
+  text-align: ${(props: any) => props.align || 'center'};
   line-height: ${(props: any) => props.lh || '25'}px;
   margin: 10px 0 10px ${(props: any) => props.ml ? '10' : '0'}px;
   padding: 0 0 0 ${(props: any) => props.pl ? '20':'0'}px;

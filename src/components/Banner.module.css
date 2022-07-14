@@ -1,0 +1,9 @@
+.bannerContainer {
+  background: linear-gradient(to right, #00B2FF, #002747);
+  padding: 40px 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

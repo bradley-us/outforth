@@ -32,7 +32,7 @@ const Hero = () => {
             height='230'
             alt='Outforth Logo'
           ></Image>
-          <FlexRowContainer width='100%' justify='flex-end'>
+          <FlexRowContainer mb width='100%' justify='flex-end'>
             <ButtonGradient
               fw='bold'
               color='#2091F9'

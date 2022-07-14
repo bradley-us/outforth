@@ -37,7 +37,7 @@ const Features = () => {
 
           <FlexColumnContainer gap={30} maxWidth={'350px'}>
             <FlexRowContainer gap={10} align='flex-start'>
-              <ImgWrapper><Image src='/assets/icons/quality.svg' width={100} height={100} alt='Quality icon' /></ImgWrapper>
+              <ImgWrapper maxWidth={'50px'}><Image src='/assets/icons/quality.svg' width={100} height={100} alt='Quality icon' /></ImgWrapper>
               
               <FlexColumnContainer align='flex-start'>
                 <Text bold>At your fingertips</Text>
@@ -50,7 +50,7 @@ const Features = () => {
             </FlexRowContainer>
 
             <FlexRowContainer gap={10} align='flex-start'>
-              <ImgWrapper><Image src='/assets/icons/trophy.svg' width={100} height={100} alt='Quality icon' /></ImgWrapper>
+              <ImgWrapper maxWidth={'50px'}><Image src='/assets/icons/trophy.svg' width={100} height={100} alt='Quality icon' /></ImgWrapper>
               
               <FlexColumnContainer align='flex-start'>
                 <Text bold>At your fingertips</Text>

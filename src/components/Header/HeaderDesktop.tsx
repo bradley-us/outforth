@@ -14,9 +14,7 @@ const HeaderDesktop = () => {
     <ContainerHeader>
       <Section minWidth='110px'>
         <Link href='/'>
-          <a>
-            <Image src='/assets/logo/web_outforth.svg' width={170} height={50} alt='Outforth Logo' />
-          </a>
+            <Image style={{ cursor: 'pointer' }} src='/assets/logo/web_outforth.svg' width={170} height={50} alt='Outforth Logo' />
         </Link>
       </Section>
       <SectionNav gridColumns='4'>

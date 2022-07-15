@@ -22,7 +22,7 @@ const Features = () => {
           </Text>
         </FlexColumnContainer>
 
-        <FlexRowContainer mt>
+        <FlexRowContainer mt mtMD>
           <Container gridColumns='1'>
             <ImgWrapper>
               <Image

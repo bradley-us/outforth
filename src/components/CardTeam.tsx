@@ -3,6 +3,8 @@ import React from 'react'
 import { ButtonGradient } from '../styles/Global/Button'
 import { Box, Container, FlexColumnContainer, FlexRowContainer, ImgWrapper, Text } from '../styles/Global/Components'
 
+import styles from './CardTeam.module.css'
+
 interface ICardTeam {
   imgPath?: string;
   name?: string;
@@ -12,7 +14,7 @@ interface ICardTeam {
 }
 const CardTeam = ({ imgPath = '/assets/img_test.jpg', name = 'Name', desc = 'Description', btnText = 'Contactar', links = [1,2] }: ICardTeam) => {
   return (
-    <FlexRowContainer width={'100%'}>
+    <FlexRowContainer className={styles.cardContainer} width={'100%'}>
       <Box
         br={20}
         maxWidth={'400px'}

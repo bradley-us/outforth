@@ -13,18 +13,17 @@ export default function Accordion({ items }: { items?: any }) {
 
   const [elems, setElems] = useState(questionsBlock);
 
-  const loadMoreQuestions = () => {
-    setBlock(prevState => prevState +10)
+  const loadMore = () => {
+    setBlock(prevState => prevState +3)
   }
-
   const questions = () => {
     setElems(questionsBlock)
   }
 
   useEffect(() => {
     questions()
-  }, [elems, block])
-
+  }, [block])
+  
   const toggleQuestion = (elem: any, index: number) => {
     if (opened === index) {
       return setOpened(-1);
@@ -77,7 +76,7 @@ export default function Accordion({ items }: { items?: any }) {
         <FlexRowContainer mt>
           {
             items.length > block ? (
-              <Button bgColor='#FFF' color='black' fw='bold' onClick={ loadMoreQuestions }>Cargar más preguntas</Button>
+              <Button bgColor='#FFF' color='black' fw='bold' onClick={ loadMore }>Cargar más preguntas</Button>
             ): (
               <Text>No hay más preguntas</Text>
             )

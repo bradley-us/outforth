@@ -18,9 +18,9 @@ const HeaderDesktop = () => {
         </Link>
       </Section>
       <SectionNav gridColumns='3'>
-        <Link href='/'><a><li className={`${router.asPath === '/' ? styles.activeRouteDesktop: null} ${' '} ${styles.li}`}>Home</li></a></Link>
-        <Link href='/pricing'><a><li className={`${router.asPath === '/pricing' ? styles.activeRouteDesktop: null} ${' '} ${styles.li}`}>Pricing</li></a></Link>
-        <Link href='/about'><a><li className={`${router.asPath === '/about'? styles.activeRouteDesktop: null} ${' '} ${styles.li}`}>About</li></a></Link>
+        <Link href='/'><a><li className={`${router.asPath === '/' ? styles.activeRouteDesktop: null} ${' '} ${styles.li}`}>Inicio</li></a></Link>
+        <Link href='/pricing'><a><li className={`${router.asPath === '/pricing' ? styles.activeRouteDesktop: null} ${' '} ${styles.li}`}>Soluciones</li></a></Link>
+        <Link href='/about'><a><li className={`${router.asPath === '/about'? styles.activeRouteDesktop: null} ${' '} ${styles.li}`}>Sobre nosotros</li></a></Link>
         {/* <Link href='/contact'><a><li className={`${router.asPath === '/contact' ? styles.activeRouteDesktop: null} ${' '} ${styles.li}`}>Contact</li></a></Link> */}
       </SectionNav>
       <Section>

@@ -25,7 +25,7 @@ export const ContainerMobile = styled.div`
     position: relative;
     width: 100%;
     gap: 20px;
-    padding: 7px 15px;
+    padding: 16px 15px;
     justify-content: space-between;
   }
 `;

@@ -9,13 +9,17 @@ const AboutHero = () => {
       <Container py={20} gridColumns='1'>
         <FlexRowContainer>
           <Subtitle
+            fontSize={34}
             bold
+            bgDir='right'
+            bgColor1='#00B2FF'
+            bgColor3='#333'
           >
             Outforth work team
           </Subtitle>
         </FlexRowContainer>
       </Container>
-      <Container pyMD={120} py={100} gridColumns='2'>
+      <Container pyMD={20} gridColumns='2'>
         <CardTeam
           name='Bradley Ramirez'
           desc='Después te digo.'

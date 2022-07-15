@@ -1,0 +1,9 @@
+.cardContainer {
+  margin-top: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cardContainer:first-of-type {
+    margin-top: 0rem;
+  }
+}

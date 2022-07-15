@@ -31,9 +31,7 @@ const HeaderMobile = () => {
     <ContainerMobile>
       <Section minWidth='120px'>
         <Link href='/'>
-          <a>
-            <Image src='/assets/logo/web_outforth.svg' width={170} height={40} style={{ paddingTop: '7px'}} alt='Outforth Logo' />
-          </a>
+            <Image src='/assets/logo/web_outforth.svg' width={170} height={40} style={{ paddingTop: '5px', cursor: 'pointer' }} alt='Outforth Logo' />
         </Link>
       </Section>
 
@@ -67,9 +65,9 @@ const HeaderMobile = () => {
                 </figure>
               </div>
 
-              <Link href='/'><li className={`${router.asPath === '/' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Home</li></Link>
-              <Link href='/pricing'><li className={`${router.asPath === '/pricing' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Pricing</li></Link>
-              <Link href='/about'><li className={`${router.asPath === '/about'? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>About</li></Link>
+              <Link href='/'><li className={`${router.asPath === '/' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Inicio</li></Link>
+              <Link href='/pricing'><li className={`${router.asPath === '/pricing' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Soluciones</li></Link>
+              <Link href='/about'><li className={`${router.asPath === '/about'? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Sobre Nosotros</li></Link>
               {/* <Link href='/contact'><li className={`${router.asPath === '/contact' ? styles.activeRouteMobile : null} ${' '} ${styles.li}`}>Contact</li></Link> */}
               <li>
                 <ButtonGradient color='black' fw='bold'>Contactar</ButtonGradient>

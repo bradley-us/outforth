@@ -10,7 +10,7 @@ const Banner = ({ title, subtitle }: IBanner) => {
   return (
     <div className={styles.bannerContainer}>
       <PrimaryContainer>
-        <Container gridColumns='1'>
+        <Container bannerPaddingY gridColumns='1'>
           <Title
             bgColor1='#FFF'
           >{ title }</Title>

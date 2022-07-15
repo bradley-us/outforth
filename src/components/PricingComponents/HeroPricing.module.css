@@ -1,0 +1,19 @@
+.containerRelative {
+  position: relative;
+  width: 100%;
+}
+.containerAbsolute {
+  position: absolute;
+  top: 0;
+  padding: 30px 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .containerRelative {
+    height: 550px;
+  }
+
+  .containerAbsolute {
+    top: 70px;
+  }
+}

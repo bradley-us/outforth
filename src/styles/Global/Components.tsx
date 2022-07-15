@@ -8,6 +8,7 @@ type IContainer = {
   maxWidth?: string | number;
   py?: string | number;
   pyMD?: string | number;
+  bannerPaddingY?: boolean;
 }
 export const Container = styled.div<IContainer>`
   width: ${(props: any) => props.width || 'auto'};
@@ -22,7 +23,8 @@ export const Container = styled.div<IContainer>`
 
   @media ${(props) => props.theme.breakpoints.md} {
     grid-template-columns: 1fr;
-    padding: ${({pyMD}) => pyMD || '50'}px 40px;
+    padding: ${({pyMD}) => pyMD || '50'}px 15px;
+    padding: ${({bannerPaddingY}) => bannerPaddingY ? '20': 'inherit'}px 20px;
   }
 `
 
@@ -36,12 +38,14 @@ export const ContentWrapper = styled.div<IContentWrapper>`
 `
 
 type IFlexRowContainer = {
+  wrap?: boolean;
   justify?: string;
   align?: string;
   width?: string | number;
   minWidth?: string | number;
   maxWidth?: string | number;
   mt?: boolean;
+  mtMD?: boolean;
   mb?: boolean;
   gap?: number | string;
   color?: string;
@@ -54,12 +58,14 @@ export const FlexRowContainer = styled.div<IFlexRowContainer>`
   margin-bottom: ${({ mb }) => mb ? '7rem' : ''};
   display: flex;
   flex-direction: row;
+  flex-wrap: ${({ wrap }) => wrap ? 'wrap' : 'nowrap'};
   gap: ${({ gap }) => gap || '20px'}px;
   justify-content: ${(props: any) => props.justify || 'center'};
   align-items: ${(props: any) => props.align || 'center'};
   color: ${(props: any) => props.color || '#525252'};
 
   @media ${(props) => props.theme.breakpoints.md} {
+    margin-top: ${({ mtMD }) => mtMD ? '0rem' : ''};
     flex-wrap: wrap;
   }
 `
@@ -71,6 +77,7 @@ type IFlexColumnContainer = {
   minWidth?: string | number;
   maxWidth?: string | number;
   mt?: boolean;
+  mtMD?: boolean;
   mb?: boolean;
   gap?: number | string;
   color?: string;
@@ -89,6 +96,7 @@ export const FlexColumnContainer = styled.div<IFlexColumnContainer>`
   color: ${(props: any) => props.color || '#525252'};
 
   @media ${(props) => props.theme.breakpoints.md} {
+    margin-top: ${({ mtMD }) => mtMD ? '0rem' : ''};
     flex-wrap: wrap;
   }
 `
@@ -205,8 +213,8 @@ type ISectionDivider = {
 }
 export const SectionDivider = styled.div<ISectionDivider>`
 
-  width: ${({ width }) => width || '64'}px;
-  height: 6px;
+  width: ${({ width }) => width || '20'}px;
+  height: 10px;
   border-radius: 10px;
   background-color: #fff;
   background: ${(props) => props.colorAlt ? 
@@ -214,16 +222,6 @@ export const SectionDivider = styled.div<ISectionDivider>`
     'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
 
     margin: ${(props) => props.divider ? "4rem 0" : "" };
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: 48px;
-    height: 4px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 32px;
-    height: 2px;
-  }
 `
 
 type IBox = {
@@ -251,7 +249,7 @@ export const Box = styled.span<IBox>`
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 
-  border-radius: ${(props: any) => props.br || '5'}px;
+  border-radius: ${(props: any) => props.br || '5px'};
 
   width: ${(props: any) => props.width || 'auto'};
   min-width: ${(props: any) => props.minWidth || 'auto'};
